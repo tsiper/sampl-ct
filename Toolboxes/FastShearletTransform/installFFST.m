@@ -1,0 +1,19 @@
+% add all folder to Matlab path
+% execute this script to add all necessary folders to your Matlab path
+%
+%--------------------------------------------------------------------------
+% Sören Häuser ~ FFST ~ 2014-07-22 ~ last edited: 2014-07-22 (Sören Häuser)
+
+disp('Setting MATLAB path...');
+folder = fileparts(which(mfilename));
+
+% add folders to path
+addpath(...
+    fullfile(folder),...
+    fullfile(folder, 'create'),...
+    fullfile(folder, 'helper'),...
+    fullfile(folder, 'helper','checkInputs'),...
+    fullfile(folder, 'shearlets')...
+);
+
+disp('...MATLAB path set')
