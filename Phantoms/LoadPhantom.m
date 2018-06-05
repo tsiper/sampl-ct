@@ -38,7 +38,7 @@ switch PhantomType
         
     case 'sheep'
         Renormalize = @(x) (x-min(x(:)))./range(x(:));
-        I=dicomread([ RelativePath, '/SheepData/sheepscanhigh/sheepscanhigh00003.dcm' ]);
+        I=dicomread([ RelativePath, '/sheepscanhigh00003.dcm' ]);
         I=double(I);
         I = Renormalize(I);
         I=imadjust(I,[0.15,0.37]);

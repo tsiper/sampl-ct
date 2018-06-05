@@ -9,8 +9,8 @@ tic;
 %% PARAMETERS
 
 % Chossing a phantom
-PhantomTypes = {'brain','thorax','shepp','zubal'};
-PhantomType  = PhantomTypes{4};
+PhantomTypes = {'brain','thorax','shepp','zubal', 'sheep'};
+PhantomType  = PhantomTypes{5};
 
 % The interpolation methods to run
 % InterpMethod = {'filt'};
@@ -24,7 +24,7 @@ WindowSize =  16;            % The radius of the window
 % SNR = 30;              % Signal to noise ratio
 % DesiredSNR = 25:3:65;
 % DesiredSNR = 30:5:35;
-DesiredSNR = 32;
+DesiredSNR = 36;
 Sigma      = 10.^(-DesiredSNR/20); % Noise variance
 % Sigma      = 0;             % Noise variance
 Mp         = 2*N + 2;       % Number of projection angles
