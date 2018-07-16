@@ -82,7 +82,7 @@ update_y =zeros(I,radonSize);
 [thetaInd,tInd] = ind2sub(DataSize,1:radonSize);
 w_k = cell(I,1);
 if ReconstructionParams.toRecord
-    v = VideoWriter(['.\Spectral\results\',ReconstructionParams.fileRecordName,'.mp4']);
+    v = VideoWriter(ReconstructionParams.fileRecordName);
     open(v);
 end
 for k =1:ReconstructionParams.iters
@@ -164,6 +164,8 @@ for k =1:ReconstructionParams.iters
             plotRecon3(x_k,w_k,psnr_vals,f_vals,f2,k,ReconstructionParams.base);
         elseif I==2
             plotRecon2(x_k,w_k,psnr_vals,f_vals,f2,k,ReconstructionParams.base);
+        elseif I==4
+            plotRecon4(x_k,w_k,psnr_vals,f_vals,f2,k,ReconstructionParams.base);
         else
             disp('no plot');
         end
